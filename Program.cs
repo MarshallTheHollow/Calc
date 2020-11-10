@@ -9,19 +9,20 @@ namespace Калькуратор_отжиманий
     class Program
     {
         static int otg = SerializePushUps.GetPushUps();
+        static int LCount = SerializePushUps.GetPushUps();//хуйня не работает, Диабублик почини (Саня)
         static int number;
         static BinaryFormatter binFormat = new BinaryFormatter();
         
         static void Main(string[] args)
         {
             
-            Console.WriteLine("Добро пожаловать!");
+            Console.WriteLine("Welcome!");
             Start:          
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"Ваши отжимания: {otg}");
+            Console.WriteLine($"Your otgimania: {otg}");
+            Console.WriteLine($"Lavrov eats at least {LCount} barbarises");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Available commands:\nadd - добавляет ваши отжимания\nclear - очищает ваши отжимания\nEsc - выход");
-           /// ConsoleKey Keyy = Console.ReadKey().Key;
+            Console.WriteLine("Available commands:\nadd - add your otgimania\nclear - clear your otgimania\nLavrov - Add one more barbaris\noff - offaet nahoy");
             string selection = Console.ReadLine();               
             Swich(selection.Trim());
             goto Start;
@@ -48,45 +49,67 @@ namespace Калькуратор_отжиманий
             switch (selection)
             {
                 case "add":
-                    Console.WriteLine("Введите ваш топ");
+                    Console.WriteLine("Add your top");
                     try
                     {
-                        number = Convert.ToInt32(Console.ReadLine());
+                        NumberCheck();
                         otg += Convert.ToInt32(SetOtg(number));
                         SerializePushUps.UpdatePushUps(otg);
                         if (number == 1)
                         {
-                            updateConsole("ХРШ ХРШ. 777\n", ConsoleColor.Green);
+                            updateConsole("HRSH HRSH. 777", ConsoleColor.Green);
                         }
                         if (number == 8)
                         {
-                            updateConsole("ОТРАЖАЮ ПОРЧУ.\n", ConsoleColor.Yellow);
+                            updateConsole("REFFLECT THE CORRUPTION.", ConsoleColor.Yellow);
                         }
                     }
                     catch (SystemException)
                     {
-                        updateConsole("ВВЕДЕН НЕВЕРНЫЙ ФОРМАТ.\n", ConsoleColor.Red);
+                        updateConsole("System Exeption, so see.", ConsoleColor.Red);
                         goto case "add";
                     }
                     return;
                 case "clear":
-                    updateConsole("Отжимания очищены\n", ConsoleColor.Green);
+                    updateConsole("Отжимания очищены", ConsoleColor.Green);
                     otg = SetOtg(0);
                     return;
-                default:
-                    updateConsole("Ty eblan sho-le?\n", ConsoleColor.White);
+                case "Lavrov":
+                    updateConsole("Anderstendable", ConsoleColor.Green);
+                    LCount++;
+                    SerializePushUps.UpdatePushUps(LCount);
                     return;
+                case "off":
+                    Goodbye();
+                    return;
+                default:
+                    updateConsole("Error", ConsoleColor.White);
+                    return;
+            }
+        }
+        static int NumberCheck()
+        {
+            check:
+            number = Convert.ToInt32(Console.ReadLine());
+            if (number >=1 && number <= 8)
+            {
+                return number;
+            }
+            else
+            {
+                updateConsole("this top does not exist, Dyadya", ConsoleColor.Red);
+                goto check;
             }
         }
         static int SetOtg(int count)
         {
-            return count * 3; //го больше делать, оло
+            return count * 3; //го больше делать, оло|| ты моей смерти хочешб
         }
         static void updateConsole(string content, ConsoleColor CurrentConsoleColor)
         {
             Console.Clear();
             Console.ForegroundColor = CurrentConsoleColor;
-            Console.WriteLine($"{content}.\n");
+            Console.WriteLine($"{content}\n");
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
