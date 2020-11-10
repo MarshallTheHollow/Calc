@@ -1,0 +1,9 @@
+# dependencies
+/.vs
+/bin
+
+# kekw
+/obj/Debug
+/obj/Release
+
+
