@@ -11,3 +11,16 @@ C:\Users\User\source\repos\Калькуратор отжиманий\Кальк�
 C:\Users\User\source\repos\Калькуратор отжиманий\Калькуратор отжиманий\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.dll
 C:\Users\User\source\repos\Калькуратор отжиманий\Калькуратор отжиманий\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.pdb
 C:\Users\User\source\repos\Калькуратор отжиманий\Калькуратор отжиманий\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.genruntimeconfig.cache
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\bin\Debug\netcoreapp3.1\Калькуратор отжиманий.exe
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\bin\Debug\netcoreapp3.1\Калькуратор отжиманий.deps.json
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\bin\Debug\netcoreapp3.1\Калькуратор отжиманий.runtimeconfig.json
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\bin\Debug\netcoreapp3.1\Калькуратор отжиманий.runtimeconfig.dev.json
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\bin\Debug\netcoreapp3.1\Калькуратор отжиманий.dll
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\bin\Debug\netcoreapp3.1\Калькуратор отжиманий.pdb
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.csprojAssemblyReference.cache
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.csproj.CoreCompileInputs.cache
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.AssemblyInfoInputs.cache
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.AssemblyInfo.cs
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.dll
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.pdb
+C:\Users\пк\Desktop\калькулятор отжиманий\Calc\obj\Debug\netcoreapp3.1\Калькуратор отжиманий.genruntimeconfig.cache
