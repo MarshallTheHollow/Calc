@@ -20,9 +20,9 @@ namespace Калькуратор_отжиманий
             Start:          
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"Your otgimania: {otg}");
-            Console.WriteLine($"Lavrov eats at least {LCount} barbarises");
+            Console.WriteLine($"Lavrov eats at least {LCount} barbarises\n");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Available commands:\nadd - add your otgimania\nclear - clear your otgimania\nLavrov - Add one more barbaris\noff - offaet nahoy");
+            Console.WriteLine("Available commands:\nadd - add your otgimania\nclear - clear your otgimania\nLavrov - Add one more barbaris\noff - offaet nahoy\n");
             string selection = Console.ReadLine();               
             Swich(selection.Trim());
             goto Start;
@@ -63,6 +63,7 @@ namespace Калькуратор_отжиманий
                         {
                             updateConsole("REFFLECT THE CORRUPTION.", ConsoleColor.Yellow);
                         }
+                        Console.Clear(); // Иначе если топ 2-7, он не чистит :с
                     }
                     catch (SystemException)
                     {
@@ -71,19 +72,20 @@ namespace Калькуратор_отжиманий
                     }
                     return;
                 case "clear":
-                    updateConsole("Отжимания очищены", ConsoleColor.Green);
+                    updateConsole("Otgimanies cleared!", ConsoleColor.Green);
                     otg = SetOtg(0);
+                    SerializePushUps.UpdatePushUps(otg); // ты забыл эту хуйню добавить
                     return;
                 case "Lavrov":
                     updateConsole("Anderstendable", ConsoleColor.Green);
                     LCount++;
-                    SerializePushUps.UpdatePushUps(LCount);
+                    SerializePushUps.UpdatePushUps(LCount); // Тут тоже, ДИАБУЛИИИИИК!
                     return;
                 case "off":
                     Goodbye();
                     return;
                 default:
-                    updateConsole("Error", ConsoleColor.White);
+                    updateConsole("Error", ConsoleColor.Red);
                     return;
             }
         }
