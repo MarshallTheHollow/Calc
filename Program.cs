@@ -11,7 +11,7 @@ namespace Калькуратор_отжиманий
         static int p;
         static int otg;
         static string number;
-        static int LCount = 0;
+        static int LCount;
         static BinaryFormatter binFormat = new BinaryFormatter();
         static void Main(string[] args)
         {
