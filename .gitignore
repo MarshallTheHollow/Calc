@@ -3,8 +3,8 @@
 /bin
 
 # kekw
-/obj/Debug
-/obj/Release
+obj/Debug
+obj/Release
 
 
 
@@ -39,3 +39,49 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+/.vs/Calc/v16/.suo
+/.vs/slnx.sqlite
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.dll
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.pdb
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.runtimeconfig.dev.json
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.assets.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.csproj.CoreCompileInputs.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.csprojAssemblyReference.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.dll
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.pdb
+/obj/project.assets.json
+/obj/project.nuget.cache
+/obj/Калькуратор отжиманий.csproj.nuget.dgspec.json
+/obj/Калькуратор отжиманий.csproj.nuget.g.props
+/.vs/Calc/v16/.suo
+/.vs/slnx.sqlite
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.dll
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.pdb
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.runtimeconfig.dev.json
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.assets.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.csproj.CoreCompileInputs.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.csprojAssemblyReference.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.dll
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.pdb
+/obj/project.assets.json
+/obj/project.nuget.cache
+/obj/Калькуратор отжиманий.csproj.nuget.dgspec.json
+/obj/Калькуратор отжиманий.csproj.nuget.g.props
+/.vs/Calc/v16/.suo
+/.vs/slnx.sqlite
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.dll
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.pdb
+/bin/Debug/netcoreapp3.1/Калькуратор отжиманий.runtimeconfig.dev.json
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.assets.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.csproj.CoreCompileInputs.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.csprojAssemblyReference.cache
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.dll
+/obj/Debug/netcoreapp3.1/Калькуратор отжиманий.pdb
+/obj/project.assets.json
+/obj/project.nuget.cache
+/obj/Калькуратор отжиманий.csproj.nuget.dgspec.json
+/obj/Калькуратор отжиманий.csproj.nuget.g.props
+/.vs/slnx.sqlite
+/obj/Калькуратор отжиманий.csproj.nuget.g.props
+/obj/Калькуратор отжиманий.csproj.nuget.g.props
+/obj/Калькуратор отжиманий.csproj.nuget.g.props

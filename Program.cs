@@ -8,45 +8,31 @@ namespace Калькуратор_отжиманий
     [Serializable]
     class Program
     {
-        static int p = 0;
-        static int otg = 0;
-        static string number;
+        static int otg = SerializePushUps.GetPushUps();
+        static int number;
         static BinaryFormatter binFormat = new BinaryFormatter();
+        
         static void Main(string[] args)
         {
-            using (FileStream fStream = new FileStream("user.dat", FileMode.OpenOrCreate))
-            {
-                otg = (int)binFormat.Deserialize(fStream);
-            }
+            
             Console.WriteLine("Добро пожаловать!");
-        Start:          
+            Start:          
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"Ваши отжимания: {otg}\n");
+            Console.WriteLine($"Ваши отжимания: {otg}");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Существующие команды:\nДобавить - добавляет ваши отжимания\nОчистить - очищает ваши отжимания\nEsc - выход");
-            ConsoleKey Keyy = Console.ReadKey().Key;
-            if (Keyy == ConsoleKey.Escape)
-            {
-                Goodbye();
-            }
-            else
-            {
-                string selection = Console.ReadLine();               
-                Sich(selection);
-                goto Start;               
-            }
+            Console.WriteLine("Available commands:\nadd - добавляет ваши отжимания\nclear - очищает ваши отжимания\nEsc - выход");
+           /// ConsoleKey Keyy = Console.ReadKey().Key;
+            string selection = Console.ReadLine();               
+            Swich(selection.Trim());
+            goto Start;
         }
-        static int OtgCheck()
-        {
-            otg = p * 2;
-            return otg;
-        }
+        
         static void Goodbye()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             Thread.Sleep(25);
             Console.WriteLine("F");
-            Console.WriteLine("Дос видания! F.\n");
+            Console.WriteLine("Good Buy! F.\n");
             Thread.Sleep(300);
             Console.WriteLine(".");
             Thread.Sleep(300);
@@ -57,66 +43,51 @@ namespace Калькуратор_отжиманий
             Environment.Exit(300);
             return;
         }
-        static void Sich(string selection)
+        static void Swich(string selection)
         {
             switch (selection)
             {
-                case "обавить":
+                case "add":
                     Console.WriteLine("Введите ваш топ");
                     try
                     {
-                        number = Console.ReadLine();
-                        p += Convert.ToInt32(number);
-                        OtgCheck();
-                        using (Stream fStream = new FileStream("user.dat",
-                        FileMode.Create))
+                        number = Convert.ToInt32(Console.ReadLine());
+                        otg += Convert.ToInt32(SetOtg(number));
+                        SerializePushUps.UpdatePushUps(otg);
+                        if (number == 1)
                         {
-                            binFormat.Serialize(fStream, otg);
+                            updateConsole("ХРШ ХРШ. 777\n", ConsoleColor.Green);
                         }
-                        if (Convert.ToInt32(number) == 1)
+                        if (number == 8)
                         {
-                            Console.Clear();
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("ХРШ ХРШ. 777\n");
-                            Console.ForegroundColor = ConsoleColor.White;
-                        }
-                        if (Convert.ToInt32(number) == 8)
-                        {
-                            Console.Clear();
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine("ОТРАЖАЮ ПОРЧУ.\n");
-                            Console.ForegroundColor = ConsoleColor.White;
+                            updateConsole("ОТРАЖАЮ ПОРЧУ.\n", ConsoleColor.Yellow);
                         }
                     }
                     catch (SystemException)
                     {
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("ВВЕДЕН НЕВЕРНЫЙ ФОРМАТ.\n");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        goto case "обавить";
+                        updateConsole("ВВЕДЕН НЕВЕРНЫЙ ФОРМАТ.\n", ConsoleColor.Red);
+                        goto case "add";
                     }
                     return;
-                case "чистить":
-                    Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Отжимания очищены\n");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    p = 0;
-                    OtgCheck();
-                    using (Stream fStream = new FileStream("user.dat",
-                        FileMode.Create))
-                    {
-                        binFormat.Serialize(fStream, otg);
-                    }
+                case "clear":
+                    updateConsole("Отжимания очищены\n", ConsoleColor.Green);
+                    otg = SetOtg(0);
                     return;
                 default:
-                    Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Вы нажали неизвестную команду\n");
-                    Console.ForegroundColor = ConsoleColor.White;
+                    updateConsole("Ty eblan sho-le?\n", ConsoleColor.White);
                     return;
             }
+        }
+        static int SetOtg(int count)
+        {
+            return count * 3; //го больше делать, оло
+        }
+        static void updateConsole(string content, ConsoleColor CurrentConsoleColor)
+        {
+            Console.Clear();
+            Console.ForegroundColor = CurrentConsoleColor;
+            Console.WriteLine($"{content}.\n");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
